@@ -1,0 +1,33 @@
+@layer components {
+  .tabs__tab[aria-selected="true"] {
+    @apply !text-(--color--primary-blue);
+  }
+
+  .tabs__indicator {
+    @apply border-0 !bg-(--color--primary-blue) shadow-sm;
+  }
+
+  /*Checkbox */
+
+  .checkbox__control {
+    @apply size-5 border-2 border-gray-400 rounded data-[selected=true]:bg-blue-500 data-[selected=true]:border-blue-500;
+
+    /* Animated background indicator */
+    &::before {
+      @apply bg-accent pointer-events-none rounded-none absolute inset-0 z-0 origin-center scale-50 opacity-0 content-[''];
+      transition:
+        scale 200ms linear,
+        opacity 200ms linear,
+        background-color 200ms ease-out;
+    }
+    /* Show indicator when selected */
+    &[data-selected="true"]::before {
+      @apply scale-100 opacity-100;
+    }
+  }
+
+   .checkbox__indicator {
+    @apply text-white;
+  }
+  
+}

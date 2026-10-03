@@ -1,14 +1,16 @@
+import { Toast } from "@heroui/react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { SessionProvider } from "next-auth/react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const geistSans = Nunito({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistMono = Nunito_Sans({
+  variable: "--font-nunito-mono",
   subsets: ["latin"],
 });
 
@@ -21,9 +23,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased bg-background`}
+    > 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+      <Toast.Provider />
+      <body className="min-h-full h-screen flex flex-col">
+        <SessionProvider>
+
+          {children}
+        </SessionProvider>
+        </body>
     </html>
   );
 }

@@ -1,0 +1,56 @@
+@theme {
+  --color--primary-blue: #243bef;
+  --color-deep-blue: #1829c9;
+  --color-secondary-blue: #6482d4;
+  --color-tertiary-blue: #365ba5;
+  --color-soft-blue: #b7c2dd;
+
+  --color-primary-purple: #8064e8;
+  --color-secondary-purple: #a48bf2;
+  --color-tertiary-purple: #5948cc;
+  --color-soft-purple: #beaef8;
+  --color-background-soft-purplet: #f9faff;
+  --color-text-hover-purple: #eeebfc;
+
+  --color-primary-cyan: #25c9d6;
+  --color-soft-cyan: #ddf8fa;
+
+  --color-primary-green: #0b9b7c;
+
+  --color-primary-pink: #e94b9b;
+
+  --color-white: #ffffff;
+  --background: #f7f8fc;
+  --color-border: #e2e5ee;
+  --color-soft-purple-border: var(--color-text-hover-purple);
+
+  --color-primary-text: #202533;
+  --color-secondary-text: #697386;
+  --color-muted-text: #9aa2b1;
+
+  --color-card-surface: var(--color-white);
+  --color-card-border: var(--color-border);
+  --color-card-image-background: #eaf0ff;
+  --color-card-heading: var(--color-primary-text);
+  --color-card-text: var(--color-secondary-text);
+  --color-card-text-strong: var(--color-secondary-blue);
+  --color-card-text-soft: var(--color-soft-blue);
+  --color-card-icon: var(--color-tertiary-blue);
+  --color-card-icon-soft: var(--color-tertiary-blue);
+
+  --color-card-icon-background: #edf2ff;
+  --color-card-icon-background-hover: #dfe8ff;
+  --color-card-hover-background: #eef3ff;
+
+  --color-card-divider: #edf0f8;
+  --color-card-shadow: rgba(56, 78, 135, 0.08);
+  --color-sex-female: var(--color-primary-pink);
+  --color-sex-male: var(--color-tertiary-blue);
+  --color-status-healthy: var(--color-primary-green);
+  --color-status-healthy-background: var(--color-soft-cyan);
+  --color-carousel-border: var(--color-soft-purple-border);
+  --color-carousel-rgb: 82, 112, 184;
+
+  --accent: var(--color-soft-purple);
+  --bg-hidden-purple: rgba(203, 193, 246, 0.8);
+}

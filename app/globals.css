@@ -1,26 +1,22 @@
+/* Import order matters: Tailwind must come before the HeroUI styles. */
 @import "tailwindcss";
+@import "@heroui/styles";
+@import "./_colors.css";
+@import "./_componentes.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tailwind v4 scans these paths for utility classes. */
+@source "../";
+
+@theme {
+  --breakpoint-3xl: 115rem;   /* override default */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito-sans), system-ui, sans-serif;
+  --font-mono: var(--font-nunito-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
